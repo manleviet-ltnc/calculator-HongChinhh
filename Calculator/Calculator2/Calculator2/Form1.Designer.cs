@@ -47,7 +47,7 @@
             this.btnThapPhan = new System.Windows.Forms.Button();
             this.btnPhanTram = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnCach = new System.Windows.Forms.Button();
+            this.btnNho = new System.Windows.Forms.Button();
             this.btnDoiDau = new System.Windows.Forms.Button();
             this.btnCan = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -243,8 +243,9 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnCach
+            // btnNho
             // 
+<<<<<<< HEAD
             this.btnCach.Location = new System.Drawing.Point(93, 53);
             this.btnCach.Name = "btnCach";
             this.btnCach.Size = new System.Drawing.Size(117, 35);
@@ -252,6 +253,15 @@
             this.btnCach.Text = "Blackspace";
             this.btnCach.UseVisualStyleBackColor = true;
             this.btnCach.Click += new System.EventHandler(this.btnCach_Click);
+=======
+            this.btnNho.Location = new System.Drawing.Point(93, 53);
+            this.btnNho.Name = "btnNho";
+            this.btnNho.Size = new System.Drawing.Size(117, 35);
+            this.btnNho.TabIndex = 2;
+            this.btnNho.Text = "Backspace";
+            this.btnNho.UseVisualStyleBackColor = true;
+            this.btnNho.Click += new System.EventHandler(this.btnNho_Click);
+>>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
             // 
             // btnDoiDau
             // 
@@ -278,7 +288,7 @@
             this.ClientSize = new System.Drawing.Size(220, 256);
             this.Controls.Add(this.btnCan);
             this.Controls.Add(this.btnDoiDau);
-            this.Controls.Add(this.btnCach);
+            this.Controls.Add(this.btnNho);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnPhanTram);
             this.Controls.Add(this.btnThapPhan);
@@ -329,7 +339,7 @@
         private System.Windows.Forms.Button btnThapPhan;
         private System.Windows.Forms.Button btnPhanTram;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnCach;
+        private System.Windows.Forms.Button btnNho;
         private System.Windows.Forms.Button btnDoiDau;
         private System.Windows.Forms.Button btnCan;
     }
