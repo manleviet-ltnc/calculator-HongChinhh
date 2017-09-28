@@ -241,6 +241,7 @@
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "C";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCach
             // 
@@ -250,6 +251,7 @@
             this.btnCach.TabIndex = 2;
             this.btnCach.Text = "Blackspace";
             this.btnCach.UseVisualStyleBackColor = true;
+            this.btnCach.Click += new System.EventHandler(this.btnCach_Click);
             // 
             // btnDoiDau
             // 
@@ -301,7 +303,6 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmMain_KeyPress);
             this.ResumeLayout(false);
 
