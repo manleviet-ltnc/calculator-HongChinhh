@@ -18,54 +18,52 @@ namespace Calculator2
         }
 
         bool isTypingNumber = false;
-<<<<<<< HEAD
         enum PhepToan { None,Cong, Tru, Nhan,Chia};
-=======
-        enum PhepToan { Cong, Tru, Nhan, Chia, Can,PhanTram,DoiDau};
->>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
         PhepToan pheptoan;
 
         double nho = 0.0;
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            NhapSo("1");
-        }
         private void NhapSo(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             NhapSo(btn.Text);
         }
-        
-
-
-
-
-
         private void NhapSo(string so)
         {
             if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + so;
+                if (lblDisplay.Text != "0." && lblDisplay.Text != "0")
+                    lblDisplay.Text = lblDisplay.Text + so;
+                else
+                    lblDisplay.Text = so;
+
             else
-                lblDisplay.Text = so;
-            isTypingNumber = true;
+            { lblDisplay.Text = so;
+                isTypingNumber = true;
+            }
     
          }
-<<<<<<< HEAD
+        private void btnThapPhan_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem đã tồn tại dấu chấm trong lblDisplay.Text hay chưa
+            if (lblDisplay.Text.Contains("."))
+            {
+                if (lblDisplay.Text == "0.")
+                {
+                    lblDisplay.Text = "";
+                    NhapSo("0.");
+                }
+                return;
+            }
+
+            lblDisplay.Text += ".";
+        }
         private void btnCach_Click(object sender, EventArgs e)
         {
-            lblDisplay.Text.Remove(lblDisplay.Text.Length - 1, lblDisplay.Text.Length);
-        }
-
-=======
-        private void btnNho_Click(object sender, EventArgs e)
-        {
+            string text = lblDisplay.Text;
+            lblDisplay.Text = text.Remove(text.Length-1);
             
-
-            lblDisplay.Text.Remove(lblDisplay.Text.Length-1);
-
         }
->>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
+
         private void NhapPhepToan(object sender, EventArgs e)
         {
             if (nho != 0)
@@ -78,17 +76,7 @@ namespace Calculator2
                 case "-": pheptoan = PhepToan.Tru; break;
                 case "*": pheptoan = PhepToan.Nhan; break;
                 case "/": pheptoan = PhepToan.Chia; break;
-<<<<<<< HEAD
             }
-=======
-                case "√": pheptoan = PhepToan.Can; break;
-                case "%": pheptoan = PhepToan.PhanTram; break;
-                case "-/+": pheptoan = PhepToan.DoiDau;break;
-
-
-            }
-            TinhKetQua();
->>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
 
             nho = double.Parse(lblDisplay.Text);
 
@@ -100,26 +88,22 @@ namespace Calculator2
             //tinh toan dua tren : nho, pheptoan, lbldisplay.text
             double tam = double.Parse(lblDisplay.Text);
             double ketqua = 0.0;
-            switch (pheptoan)
+            switch(pheptoan)
             {
                 case PhepToan.Cong: ketqua = nho + tam; break;
-                case PhepToan.Tru: ketqua = nho - tam; break;
-                case PhepToan.Chia: ketqua = nho / tam; break;
-                case PhepToan.Nhan: ketqua = nho * tam; break;
-                case PhepToan.Can: ketqua = Math.Sqrt(tam); break;
-                case PhepToan.PhanTram: ketqua = tam / 100; break;
-                case PhepToan.DoiDau: ketqua = tam * (-1);break;
+                case PhepToan.Tru: ketqua = nho - tam;break;
+                case PhepToan.Chia: ketqua = nho / tam;break;
+                case PhepToan.Nhan: ketqua = nho * tam;break;
 
 
             }
 
 
             lblDisplay.Text = ketqua.ToString();
-
+         
             // gan ket qua tinh duoc len display
 
         }
-<<<<<<< HEAD
         private void btnXoa_Click(object sender, EventArgs e)
         {
             nho = 0;
@@ -127,9 +111,6 @@ namespace Calculator2
         }
 
         private void btnBang_Click(object sender, EventArgs e)
-=======
-         private void btnBang_Click(object sender, EventArgs e)
->>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
         {
             TinhKetQua();
             isTypingNumber = false;
@@ -157,15 +138,6 @@ namespace Calculator2
                     break;
             }
                 
-<<<<<<< HEAD
-=======
-       }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            nho = 0;
-            lblDisplay.Text = "0";
->>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
         }
 
         

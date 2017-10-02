@@ -245,23 +245,22 @@
             // 
             // btnNho
             // 
-<<<<<<< HEAD
-            this.btnCach.Location = new System.Drawing.Point(93, 53);
-            this.btnCach.Name = "btnCach";
-            this.btnCach.Size = new System.Drawing.Size(117, 35);
-            this.btnCach.TabIndex = 2;
-            this.btnCach.Text = "Blackspace";
-            this.btnCach.UseVisualStyleBackColor = true;
-            this.btnCach.Click += new System.EventHandler(this.btnCach_Click);
-=======
+            
+            
+            
+            
+            
+            
+            
+
             this.btnNho.Location = new System.Drawing.Point(93, 53);
             this.btnNho.Name = "btnNho";
             this.btnNho.Size = new System.Drawing.Size(117, 35);
             this.btnNho.TabIndex = 2;
             this.btnNho.Text = "Backspace";
             this.btnNho.UseVisualStyleBackColor = true;
-            this.btnNho.Click += new System.EventHandler(this.btnNho_Click);
->>>>>>> 5bdf69bcaa11626964b8d5d47e0c5ac8764ee263
+            
+
             // 
             // btnDoiDau
             // 
