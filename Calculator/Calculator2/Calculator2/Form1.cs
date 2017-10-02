@@ -44,16 +44,17 @@ namespace Calculator2
          }
         private void btnThapPhan_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem đã tồn tại dấu chấm trong lblDisplay.Text hay chưa
+            
             if (lblDisplay.Text.Contains("."))
             {
                 if (lblDisplay.Text == "0.")
                 {
-                    lblDisplay.Text = "";
+                    lblDisplay.Text ="";
                     NhapSo("0.");
                 }
                 return;
             }
+            
 
             lblDisplay.Text += ".";
         }
